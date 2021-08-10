@@ -10,7 +10,7 @@ Using Segment to optimize which Twilio channel to engage a user on.
 ## Getting Started
 1. Fork and clone this repo
 2. Initialize Node app with `npm init`
-3. Install the following libraries using this command: `npm install --save express body-parser ab-testing twilio @sendgrid/mail analytics-node dotenv`
+3. Install the following libraries using this command: `npm install --save express twilio @sendgrid/mail analytics-node dotenv`
 4. Add a `.env` file in the root of this directory.
 5. In the `.env`, copy and paste the following code and add your keys for Twilio, Segment, and Sendgrid, as well your phone number and email where you want to receive notifications from the demo, and lastly your Sendgrid email that you are using to send emails:
 ```
