@@ -2,7 +2,6 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 
-app.use(bodyParser.urlencoded({ extended: true }));
 const port = process.env.PORT
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID;
