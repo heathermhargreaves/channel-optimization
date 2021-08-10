@@ -51,7 +51,7 @@ const bucket_no = Math.floor(Math.random() * channels.length)
 
 const channel_assigned = channels[bucket_no].name
 
-console.log(`Variation is ${variation}`)
+console.log(`Channel is ${channel_assigned}`)
 
 // Segment call to track experiment info
 analytics.track({
