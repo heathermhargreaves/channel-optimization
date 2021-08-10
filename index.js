@@ -50,17 +50,16 @@ const channels = [{ name: 'SMS' }, { name: 'CALL' }, { name: 'EMAIL' } ];
 
 const bucket_no = Math.floor(Math.random() * channels.length)
 
-const variation = channels[bucket_no].name
+const channel_assigned = channels[bucket_no].name
 
 console.log(`Variation is ${variation}`)
 
 // Segment call to track experiment info
 analytics.track({
     userId: user.userId,
-    event: 'Experiment Viewed',
+    event: 'Notification Sent',
     properties: {
-      experiment_name: 'Channel Assignment',
-      variation_name: variation
+      channel: channel_assigned
     }
 });
 
