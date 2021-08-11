@@ -125,7 +125,7 @@ get_pref(function(pref){
         from: twilio_info.from,
         to: user.number,
         method: 'GET',
-        statusCallback: "https://fn.segmentapis.com/?b=dTU2UHB2bVE4Q3FubWZGanJRNFh5cDo6STY0cUZ3VXJNMzNrcGxhb0ExMEhQbzIzdTdhNHIySlQ=",
+        statusCallback: process.env.SEGMENT_SOURCE_FUNCTION_URL,
         statusCallbackEvent: ['answered'],
         statusCallbackMethod: 'POST'
     })
