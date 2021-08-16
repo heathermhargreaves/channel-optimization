@@ -8,13 +8,16 @@
  * @param  {FunctionSettings} settings
  */
 async function onRequest(request, settings) {
+	// Get request body
+	let body = request.json();
+
 	// Confirm that the message was received successfully
-	if (request.json().SmsStatus != 'received') {
+	if (body.SmsStatus != 'received') {
 		return;
 	}
 
 	// Grab user's phone number from the Twilio webhook
-	let from = request.json().From;
+	let from = body.From;
 
 	// Create Segment event payload
 	let event_payload = {
@@ -23,6 +26,6 @@ async function onRequest(request, settings) {
 		properties: { phone: from, channel: 'SMS' }
 	};
 
-	// Send Segment events
+	// Send Segment event
 	Segment.track(event_payload);
 }
