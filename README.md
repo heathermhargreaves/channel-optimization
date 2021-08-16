@@ -3,7 +3,7 @@ Using Segment to optimize which Twilio channel to engage a user on.
 
 ## Requirements
 - Node
-- Segment account
+- Segment account with access to Functions and Personas Advanced
 - Twilio account with access to Programmable SMS, Programmable Voice, and a phone number
 - Sendgrid account
 
@@ -22,8 +22,10 @@ SEGMENT_KEY=
 PHONE_NUMBER=
 EMAIL=
 SGEMAIL=
+SEGMENT_CALL_SOURCE_FUNCTION_URL=
+SEGMENT_PERSONAS_SPACE_ID=
+SEGMENT_PROFILE_API_TOKEN=
 ```
 
-6. On line 15 in `index.js` you will see the `user` variable, update this your name and a random user id to receive a message.
-7. On line 23 in `index.js` update `twilio_info.from` to your Twilio number.
-10. Make sure your local updates are saved and run `node index.js` to start your app.
+6. On line 18 in `index.js` you will see the `user` variable, update this with a name and a random user id to receive a message.
+7. Make sure your local updates are saved and run `node index.js` to start your app.
