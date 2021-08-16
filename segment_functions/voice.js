@@ -8,13 +8,16 @@
  * @param  {FunctionSettings} settings
  */
 async function onRequest(request, settings) {
+	// Get request body
+	let body = request.json();
+
 	// Confirm that this is a "call answered" event
-	if (request.json().CallStatus != 'in-progress') {
+	if (body.CallStatus != 'in-progress') {
 		return;
 	}
 
 	// Grab user's phone number from the Twilio webhook
-	let called = request.json().Called;
+	let called = body.Called;
 
 	// Create Segment event payload
 	let event_payload = {
@@ -23,6 +26,6 @@ async function onRequest(request, settings) {
 		properties: { phone: called, channel: 'CALL' }
 	};
 
-	// Send Segment events
+	// Send Segment event
 	Segment.track(event_payload);
 }
