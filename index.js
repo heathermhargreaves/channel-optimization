@@ -125,7 +125,7 @@ get_pref(function(pref){
         from: twilio_info.from,
         to: user.number,
         method: 'GET',
-        statusCallback: process.env.SEGMENT_SOURCE_FUNCTION_URL,
+        statusCallback: process.env.SEGMENT_CALL_SOURCE_FUNCTION_URL,
         statusCallbackEvent: ['answered'],
         statusCallbackMethod: 'POST'
     })
