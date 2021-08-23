@@ -25,7 +25,7 @@ let user = {
 // Twilio and Sendgrid info to be used for notifications
 let twilio_info = {
     from: process.env.TWILIO_PHONE_NUMBER,
-    body: `Reminder for ${user.name} your appointment is coming up tomorrow`,
+    body: `Reminder for ${user.name} your appointment is coming up tomorrow. Respond to confirm.`,
     twiml: `<Response><Say>Reminder for ${user.name} your appointment is coming up tomorrow</Say></Response>`
 }
 
