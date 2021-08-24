@@ -1,5 +1,6 @@
 # channel-optimization
-Using Segment to optimize which Twilio channel to engage a user on.
+Using Segment to optimize which Twilio channel to engage a user on. 
+For full setup instructions, see https://www.twilio.com/blog/optimize-preferred-communications-channels-computed-traits
 
 ## Requirements
 - Node
