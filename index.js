@@ -18,8 +18,8 @@ const analytics = new Analytics(process.env.SEGMENT_KEY);
 let user = {
     userId: '20',
     name: 'Stacy',
-    number: process.env.USER_PHONE_NUMBER,
-    email: process.env.USER_EMAIL
+    number: process.env.PHONE_NUMBER,
+    email: process.env.EMAIL
 }
 
 // Twilio and Sendgrid info to be used for notifications
